@@ -1,4 +1,4 @@
-# 🎬 Movie Recommendation System
+# 🎬 Movie Recommender System
 
 A content-based movie recommender system built with Python and Streamlit. It helps users discover movies similar to their favorites using metadata like cast, crew, genres, and keywords.
 
