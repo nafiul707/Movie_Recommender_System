@@ -26,29 +26,32 @@ After downloading:
 
 ---
 
-## 📁 Important Notes on File Paths
+## 📁 Folder & File Setup (Must Read)
 
-The deployed Streamlit app (`app.py`) resides in the `Front-End/` folder.  
-Make sure to place the generated `.pkl` files inside this folder **exactly like this**:
+The `app.py` file is located inside the `Front-End/` folder.  
+To avoid path issues, you should also place the generated `.pkl` files there:
 
 ```
 Front-End/
 ├── app.py
-├── movie_list.pkl       ✅ Must be here
-└── similarity.pkl       ✅ Must be here
+├── movie_list.pkl       ✅ place here after running the notebook
+└── similarity.pkl       ✅ place here after running the notebook
 ```
 
-If the `.pkl` files are elsewhere, the app **will not run** properly.
+You will get `movie_list.pkl` and `similarity.pkl` after running all cells in the notebook (`Movie_Recommender_System.ipynb`).  
+If these files are placed elsewhere, the app **won’t work**.
 
 ---
 
-## ▶️ Running the App
+## ▶️ Run the App
 
-1. Make sure `movie_list.pkl` and `similarity.pkl` are inside `Front-End/`
-2. Open terminal in `Front-End/`
-3. Run:
+1. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)  
+2. Run the notebook to generate `.pkl` files  
+3. Move both `.pkl` files into the `Front-End/` folder  
+4. In terminal:
 
 ```bash
+cd Front-End
 streamlit run app.py
 ```
 
