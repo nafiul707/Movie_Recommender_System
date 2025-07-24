@@ -1,59 +1,60 @@
 # 🎬 Movie Recommendation System
 
-This is a content-based movie recommender system built using Python. It helps users discover movies similar to their favorites based on metadata like cast, crew, genres, and keywords.
+A content-based movie recommender system built with Python and Streamlit. It helps users discover movies similar to their favorites using metadata like cast, crew, genres, and keywords.
 
-## 📦 Project Access
+---
 
-Due to GitHub file size limits, the full project is uploaded as a ZIP file.  
-➡️ **[Download and extract `Movie_Recommender_System.zip`](./Movie_Recommender_System.zip)**
+## 📦 Dataset
 
-Once extracted:
-- Open `Movie_Recommender_System.ipynb`
-- Run the notebook in Jupyter or Google Colab
-- Ensure all CSV files are in the same folder
+Due to GitHub’s file size restrictions, the dataset is **not included** in this repo.
+
+📥 **Download the dataset from Kaggle**:  
+[TMDB Movie Metadata Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+
+After downloading:
+- Place `tmdb_5000_movies.csv` and `tmdb_5000_credits.csv` in the project root (or wherever your notebook expects them).
+- Run the notebook (`Movie_Recommender_System.ipynb`) to generate the `.pkl` files.
 
 ---
 
 ## 🧠 How It Works
 
-1. Merge and clean metadata from TMDB datasets
-2. Extract relevant features (overview, cast, crew, genres)
-3. Vectorize using `CountVectorizer`
-4. Compute similarity using cosine distance
-5. Serve results via a simple Streamlit front-end
+- Extracts features from metadata (`overview`, `cast`, `crew`, `keywords`, etc.)
+- Transforms them using `CountVectorizer`
+- Computes similarity using cosine distance
+- Returns top recommended movies based on similarity score
 
 ---
 
-## 🗂️ Folder Structure
+## 📁 Important Notes on File Paths
+
+The deployed Streamlit app (`app.py`) resides in the `Front-End/` folder.  
+Make sure to place the generated `.pkl` files inside this folder **exactly like this**:
 
 ```
-Movie_Recommender_System/
-├── Movie_Recommender_System.ipynb       # Main logic & model
-├── Front-End/
-│   ├── app.py                           # Streamlit UI
-│   ├── movie_list.pkl                   # ⬅️ Generated after running notebook
-│   └── similarity.pkl                   # ⬅️ Generated after running notebook
-├── tmdb_5000_credits.csv
-├── tmdb_5000_movies.csv
-└── README.md
+Front-End/
+├── app.py
+├── movie_list.pkl       ✅ Must be here
+└── similarity.pkl       ✅ Must be here
 ```
 
-⚠️ `movie_list.pkl` and `similarity.pkl` will be created automatically **after you run all cells in the Colab/Jupyter notebook**. Place both inside the `Front-End` folder before launching the app.
+If the `.pkl` files are elsewhere, the app **will not run** properly.
 
 ---
 
 ## ▶️ Running the App
 
-After generating the `.pkl` files:
+1. Make sure `movie_list.pkl` and `similarity.pkl` are inside `Front-End/`
+2. Open terminal in `Front-End/`
+3. Run:
 
 ```bash
-cd Front-End
 streamlit run app.py
 ```
 
 ---
 
-## 🛠️ Tech Used
+## 🛠️ Built With
 
 - Python
 - Pandas, NumPy
@@ -65,3 +66,4 @@ streamlit run app.py
 ## 👤 Author
 
 Developed by [Nafiul Islam](https://github.com/nafiul707)
+
