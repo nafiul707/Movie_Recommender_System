@@ -51,7 +51,6 @@ If these files are placed elsewhere, the app **won’t work**.
 4. In terminal:
 
 ```bash
-cd Front-End
 streamlit run app.py
 ```
 
