@@ -53,7 +53,9 @@ Movie_Recommender_System/
 ├── tmdb_5000_credits.csv
 └── tmdb_5000_movies.csv
 ```
+
 Keep this structure intact. If you shift or rename any file/folder, especially movie_list.pkl or similarity.pkl, the recommendation app will break due to missing dependencies.
+
 ---
 
 ## ▶️ Run the App
