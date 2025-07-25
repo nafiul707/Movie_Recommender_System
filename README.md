@@ -41,6 +41,19 @@ Front-End/
 You will get `movie_list.pkl` and `similarity.pkl` after running all cells in the notebook (`Movie_Recommender_System.ipynb`).  
 If these files are placed elsewhere, the app **won’t work**.
 
+🗂️ My Local Project Structure
+
+```
+Movie_Recommender_System/
+├── Front-End/
+│   ├── app.py
+│   ├── movie_list.pkl
+│   └── similarity.pkl
+├── Movie_Recommender_System.ipynb
+├── tmdb_5000_credits.csv
+└── tmdb_5000_movies.csv
+```
+Keep this structure intact. If you shift or rename any file/folder, especially movie_list.pkl or similarity.pkl, the recommendation app will break due to missing dependencies.
 ---
 
 ## ▶️ Run the App
