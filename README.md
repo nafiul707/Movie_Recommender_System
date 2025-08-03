@@ -66,7 +66,8 @@ Keep this structure intact. If you shift or rename any file/folder, especially m
 4. In terminal:
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
+
 ```
 
 ---
